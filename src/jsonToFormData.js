@@ -3,10 +3,18 @@
     if (!root) {
         root = {};
     }
-    if (!FileList) {
+    try {
+        if (FileList === undefined) {
+            FileList = {};
+        }
+    } catch (err) {
         FileList = {};
     }
-    if (!Blob) {
+    try {
+        if (Blob === undefined) {
+            Blob = {};
+        }
+    } catch (err) {
         Blob = {};
     }
     
