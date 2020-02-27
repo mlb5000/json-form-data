@@ -5,17 +5,17 @@
     }
     try {
         if (FileList === undefined) {
-            FileList = {};
+            FileList = ()=>{};
         }
     } catch (err) {
-        FileList = {};
+        FileList = ()=>{};
     }
     try {
         if (Blob === undefined) {
-            Blob = {};
+            Blob = ()=>{};
         }
     } catch (err) {
-        Blob = {};
+        Blob = ()=>{};
     }
     
     if (typeof define === 'function' && define.amd) {
