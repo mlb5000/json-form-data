@@ -1,4 +1,15 @@
 (function (root, factory) {
+    // root is undefined in a Webpack bundle
+    if (!root) {
+        root = {};
+    }
+    if (!FileList) {
+        FileList = {};
+    }
+    if (!Blob) {
+        Blob = {};
+    }
+    
     if (typeof define === 'function' && define.amd) {
 
         define([], function() {
