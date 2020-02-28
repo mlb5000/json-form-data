@@ -5,17 +5,21 @@
     }
     try {
         if (FileList === undefined) {
-            FileList = ()=>{};
+            function FileListImpl() {}
+            FileList = FileListImpl;
         }
     } catch (err) {
-        FileList = ()=>{};
+        function FileListImpl() {}
+        FileList = FileListImpl;
     }
     try {
         if (Blob === undefined) {
-            Blob = ()=>{};
+            function BlobImpl() {}
+            Blob = BlobImpl;
         }
     } catch (err) {
-        Blob = ()=>{};
+        function BlobImpl() {}
+        Blob = BlobImpl;
     }
     
     if (typeof define === 'function' && define.amd) {
